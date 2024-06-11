@@ -4,13 +4,13 @@ addEventListener("fetch", (event) => {
 });
 
 const routes = {
-  "docker.tycng.com": "https://registry-1.docker.io",
-  "quay.tycng.com": "https://quay.io",
-  "gcr.tycng.com": "https://gcr.io",
-  "k8s-gcr.tycng.com": "https://k8s.gcr.io",
-  "k8s.tycng.com": "https://registry.k8s.io",
-  "ghcr.tycng.com": "https://ghcr.io",
-  "cloudsmith.tycng.com": "https://docker.cloudsmith.io",
+  "docker.wzxmt.xyz": "https://registry-1.docker.io",
+  "quay.wzxmt.xyz": "https://quay.io",
+  "gcr.wzxmt.xyz": "https://gcr.io",
+  "k8s-gcr.wzxmt.xyz": "https://k8s.gcr.io",
+  "k8s.wzxmt.xyz": "https://registry.k8s.io",
+  "ghcr.wzxmt.xyz": "https://ghcr.io",
+  "cloudsmith.wzxmt.xyz": "https://docker.cloudsmith.io",
 };
 
 function routeByHosts(host) {
