@@ -1,5 +1,5 @@
 name = "cloudflare-docker-proxy"
-compatibility_date = "2023-12-01"
+compatibility_date = "2024-10-09"
 
 [dev]
 ip = "0.0.0.0"
@@ -15,15 +15,15 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-# routes = [
-#   { pattern = "docker.wzxmt.xyz", custom_domain = true },
-#   { pattern = "quay.wzxmt.xyz", custom_domain = true },
-#   { pattern = "gcr.wzxmt.xyz", custom_domain = true },
-#   { pattern = "k8s-gcr.wzxmt.xyz", custom_domain = true },
-#   { pattern = "k8s.wzxmt.xyz", custom_domain = true },
-#   { pattern = "ghcr.wzxmt.xyz", custom_domain = true },
-#   { pattern = "cloudsmith.wzxmt.xyz", custom_domain = true },
-# ]
+routes = [
+  { pattern = "docker.wzxmt.xyz", custom_domain = true },
+  { pattern = "quay.wzxmt.xyz", custom_domain = true },
+  { pattern = "gcr.wzxmt.xyz", custom_domain = true },
+  { pattern = "k8s-gcr.wzxmt.xyz", custom_domain = true },
+  { pattern = "k8s.wzxmt.xyz", custom_domain = true },
+  { pattern = "ghcr.wzxmt.xyz", custom_domain = true },
+  { pattern = "cloudsmith.wzxmt.xyz", custom_domain = true },
+]
 
 [env.production.vars]
 MODE = "production"
