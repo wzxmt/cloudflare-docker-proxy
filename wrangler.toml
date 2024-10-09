@@ -16,13 +16,13 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 [env.production]
 name = "cloudflare-docker-proxy"
 routes = [
-  { pattern = "docker.wzxmt.xyz", custom_domain = true },
-  { pattern = "quay.wzxmt.xyz", custom_domain = true },
-  { pattern = "gcr.wzxmt.xyz", custom_domain = true },
-  { pattern = "k8s-gcr.wzxmt.xyz", custom_domain = true },
-  { pattern = "k8s.wzxmt.xyz", custom_domain = true },
-  { pattern = "ghcr.wzxmt.xyz", custom_domain = true },
-  { pattern = "cloudsmith.wzxmt.xyz", custom_domain = true },
+  { pattern = "tylhjsevjg.wzxmt.xyz", custom_domain = true },
+  { pattern = "tiwpengobr.wzxmt.xyz", custom_domain = true },
+  { pattern = "ztwuicjnkq.wzxmt.xyz", custom_domain = true },
+  { pattern = "bdyfvhmrph.wzxmt.xyz", custom_domain = true },
+  { pattern = "rwayianyvf.wzxmt.xyz", custom_domain = true },
+  { pattern = "rnydvvgapq.wzxmt.xyz", custom_domain = true },
+  { pattern = "wyvczirkvu.wzxmt.xyz", custom_domain = true },
 ]
 
 [env.production.vars]
