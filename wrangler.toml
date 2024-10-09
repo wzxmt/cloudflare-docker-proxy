@@ -28,3 +28,6 @@ routes = [
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
+
+[observability]
+enabled = true
