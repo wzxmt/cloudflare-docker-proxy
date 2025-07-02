@@ -7,17 +7,13 @@ const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
   // production
-  ["docker." + CUSTOM_DOMAIN]: dockerHub,
-  ["quay." + CUSTOM_DOMAIN]: "https://quay.io",
-  ["gcr." + CUSTOM_DOMAIN]: "https://gcr.io",
-  ["k8s-gcr." + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
-  ["k8s." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
-  ["ghcr." + CUSTOM_DOMAIN]: "https://ghcr.io",
-  ["cloudsmith." + CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
-  ["ecr." + CUSTOM_DOMAIN]: "https://public.ecr.aws",
-
-  // staging
-  ["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
+  ["tylhjsevjg." + CUSTOM_DOMAIN]: dockerHub,
+  ["tiwpengobr." + CUSTOM_DOMAIN]: "https://quay.io",
+  ["ztwuicjnkq." + CUSTOM_DOMAIN]: "https://gcr.io",
+  ["bdyfvhmrph." + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
+  ["rwayianyvf." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
+  ["rnydvvgapq." + CUSTOM_DOMAIN]: "https://ghcr.io",
+  ["wyvczirkvu." + CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
 };
 
 function routeByHosts(host) {
@@ -32,7 +28,7 @@ function routeByHosts(host) {
 
 async function handleRequest(request) {
   const url = new URL(request.url);
-  if (url.pathname == "/") {
+  if (url.pathname == "/") {Add commentMore actions
     return Response.redirect(url.protocol + "//" + url.host + "/v2/", 301);
   }
   const upstream = routeByHosts(url.hostname);
@@ -108,7 +104,8 @@ async function handleRequest(request) {
   const newReq = new Request(newUrl, {
     method: request.method,
     headers: request.headers,
-    // don't follow redirect to dockerhub blob upstream
+   // redirect: "follow",
+   // don't follow redirect to dockerhub blob upstream
     redirect: isDockerHub ? "manual" : "follow",
   });
   const resp = await fetch(newReq);
