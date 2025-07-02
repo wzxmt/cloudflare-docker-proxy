@@ -1,5 +1,5 @@
 name = "cloudflare-docker-proxy"
-compatibility_date = "2024-10-09"
+compatibility_date = "2023-12-01"
 
 [dev]
 ip = "0.0.0.0"
@@ -7,28 +7,33 @@ port = 8787
 local_protocol = "http"
 
 [env.vars]
-CUSTOM_DOMAIN = "wzxmt.site"
+CUSTOM_DOMAIN = "libcuda.so"
 
 [env.dev.vars]
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
-CUSTOM_DOMAIN = "wzxmt.site"
+CUSTOM_DOMAIN = "exmaple.com"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-routes = [
-  { pattern = "tylhjsevjg.wzxmt.site", custom_domain = true },
-  { pattern = "tiwpengobr.wzxmt.site", custom_domain = true },
-  { pattern = "ztwuicjnkq.wzxmt.site", custom_domain = true },
-  { pattern = "bdyfvhmrph.wzxmt.site", custom_domain = true },
-  { pattern = "rwayianyvf.wzxmt.site", custom_domain = true },
-  { pattern = "rnydvvgapq.wzxmt.site", custom_domain = true },
-  { pattern = "wyvczirkvu.wzxmt.site", custom_domain = true },
-]
+# routes = [
+#   { pattern = "docker.libcuda.so", custom_domain = true },
+#   { pattern = "quay.libcuda.so", custom_domain = true },
+#   { pattern = "gcr.libcuda.so", custom_domain = true },
+#   { pattern = "k8s-gcr.libcuda.so", custom_domain = true },
+#   { pattern = "k8s.libcuda.so", custom_domain = true },
+#   { pattern = "ghcr.libcuda.so", custom_domain = true },
+#   { pattern = "cloudsmith.libcuda.so", custom_domain = true },
+# ]
 
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
 
-[observability]
-enabled = true
+[env.staging]
+name = "cloudflare-docker-proxy-staging"
+# route = { pattern = "docker-staging.libcuda.so", custom_domain = true }
+
+[env.staging.vars]
+MODE = "staging"
+TARGET_UPSTREAM = ""
