@@ -24,6 +24,7 @@ routes = [
   { pattern = "rwayianyvf.wzxmt.site", custom_domain = true },
   { pattern = "rnydvvgapq.wzxmt.site", custom_domain = true },
   { pattern = "wyvczirkvu.wzxmt.site", custom_domain = true },
+  { pattern = "ecrwyvczir.wzxmt.site", custom_domain = true },
 ]
 
 [env.production.vars]
