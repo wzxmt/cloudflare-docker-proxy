@@ -30,10 +30,10 @@
    - add more records and modify the config as you need
    ```javascript
    const routes = {
-     "docker.wzxmt.site": "https://registry-1.docker.io",
-     "quay.wzxmt.site": "https://quay.io",
-     "gcr.wzxmt.site": "https://k8s.gcr.io",
-     "k8s-gcr.wzxmt.site": "https://k8s.gcr.io",
-     "ghcr.wzxmt.site": "https://ghcr.io",
+     "docker.wzxt.asia": "https://registry-1.docker.io",
+     "quay.wzxt.asia": "https://quay.io",
+     "gcr.wzxt.asia": "https://k8s.gcr.io",
+     "k8s-gcr.wzxt.asia": "https://k8s.gcr.io",
+     "ghcr.wzxt.asia": "https://ghcr.io",
    };
    ```
