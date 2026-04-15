@@ -37,4 +37,3 @@
      "ghcr.wzxmt.site": "https://ghcr.io",
    };
    ```
-
